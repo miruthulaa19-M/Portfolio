@@ -1,0 +1,5 @@
+overrides:
+  "*.css": "TypeScript"
+  "*.module.css": "TypeScript"
+  "public/index.html": false
+  "build/**": false
