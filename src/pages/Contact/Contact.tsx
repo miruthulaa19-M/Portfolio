@@ -66,26 +66,26 @@ const Contact: React.FC = () => {
               <div className={styles.contactDetails}>
                 <div className={styles.contactItem}>
                   <h4>📧 Email</h4>
-                  <p>your.email@example.com</p>
+                  <p>miruthulaa19@gmail.com</p>
                 </div>
                 <div className={styles.contactItem}>
                   <h4>📱 Phone</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <p>9345501737</p>
                 </div>
                 <div className={styles.contactItem}>
                   <h4>📍 Location</h4>
-                  <p>Your City, Country</p>
+                  <p>Uthukuli, India</p>
                 </div>
               </div>
               
               <div className={styles.socialLinks}>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/miruthulaa" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/miruthulaa" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/miruthulaa" target="_blank" rel="noopener noreferrer">
                   Twitter
                 </a>
               </div>

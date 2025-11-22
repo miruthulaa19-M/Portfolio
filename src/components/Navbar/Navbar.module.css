@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--bg-primary);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1000;
   padding: 1rem 0;
 }
@@ -19,8 +19,9 @@
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: white;
   text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .navLinks {
@@ -30,16 +31,18 @@
 }
 
 .navLink {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .navLink:hover,
 .navLink.active {
-  color: var(--primary-color);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .navLink.active::after {
@@ -49,7 +52,8 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: var(--primary-color);
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+  border-radius: 2px;
 }
 
 .navRight {
@@ -70,9 +74,10 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: var(--text-primary);
+  background-color: white;
   margin: 3px 0;
   transition: 0.3s;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -81,12 +86,13 @@
     top: 70px;
     left: 0;
     right: 0;
-    background-color: var(--bg-primary);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 2rem;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .navLinks.open {

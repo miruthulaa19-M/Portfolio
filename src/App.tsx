@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Global3DBackground from './components/Global3DBackground/Global3DBackground';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Skills from './pages/Skills/Skills';
@@ -16,6 +17,7 @@ function App() {
     <ThemeProvider>
       <Router>
         <div className="App">
+          <Global3DBackground />
           <Navbar />
           <main>
             <Routes>

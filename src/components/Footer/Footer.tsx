@@ -30,9 +30,9 @@ const Footer = () => {
           <div className={styles.footerSection}>
             <h4>Connect</h4>
             <div className={styles.social}>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="mailto:contact@example.com">Email</a>
+              <a href="https://github.com/miruthulaa" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://linkedin.com/in/miruthulaa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="mailto:miruthulaa19@gmail.com">Email</a>
             </div>
           </div>
         </div>

@@ -3,33 +3,39 @@ import { motion } from 'framer-motion';
 import styles from './Resume.module.css';
 
 const Resume = () => {
-  const experience = [
-    {
-      title: 'Senior Web Developer',
-      company: 'Tech Company Inc.',
-      period: '2022 - Present',
-      description: 'Led web development for multiple applications using React and TypeScript. Improved application performance by 40% and mentored junior developers.'
-    },
-    {
-      title: 'Web Developer',
-      company: 'Digital Solutions Ltd.',
-      period: '2020 - 2022',
-      description: 'Developed and maintained web applications using React, Node.js, and MongoDB. Collaborated with cross-functional teams to deliver high-quality products.'
-    },
-    {
-      title: 'Junior Web Developer',
-      company: 'StartUp Ventures',
-      period: '2019 - 2020',
-      description: 'Built responsive websites and web applications. Gained experience in modern web technologies and agile development methodologies.'
-    }
-  ];
-
   const education = [
     {
       degree: 'Bachelor of Computer Science',
-      school: 'University of Technology',
-      period: '2015 - 2019',
-      description: 'Graduated with honors. Focused on software engineering and web development.'
+      school: 'KSR COLLEGE OF ENGINEERING',
+      period: '2024 - 2028',
+      description: 'Currently pursuing Bachelor of Computer Science with focus on software engineering and web development.'
+    },
+    {
+      degree: 'Higher Secondary Education',
+      school: 'SR MATRIC HR SEC SCHOOL UTHUKULI',
+      period: '2023 - 2024',
+      description: 'Completed higher secondary education with focus on science and mathematics.'
+    }
+  ];
+
+  const projects = [
+    {
+      title: 'Portfolio Website',
+      description: 'A responsive portfolio website showcasing projects and skills with modern design.',
+      technologies: 'React, CSS Modules'
+    }
+  ];
+
+  const certifications = [
+    {
+      title: 'Ideathon - AI Trainer Tool',
+      issuer: 'Tech Competition',
+      date: '2025'
+    },
+    {
+      title: 'Hackathon (TANCAM)',
+      issuer: 'TANCAM',
+      date: '2024'
     }
   ];
 
@@ -62,9 +68,9 @@ const Resume = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <h2 className={styles.sectionTitle}>Experience</h2>
+              <h2 className={styles.sectionTitle}>Education</h2>
               <div className={styles.timeline}>
-                {experience.map((exp, index) => (
+                {education.map((edu, index) => (
                   <motion.div
                     key={index}
                     className={styles.timelineItem}
@@ -74,10 +80,10 @@ const Resume = () => {
                   >
                     <div className={styles.timelineMarker}></div>
                     <div className={styles.timelineContent}>
-                      <h3>{exp.title}</h3>
-                      <h4>{exp.company}</h4>
-                      <span className={styles.period}>{exp.period}</span>
-                      <p>{exp.description}</p>
+                      <h3>{edu.degree}</h3>
+                      <h4>{edu.school}</h4>
+                      <span className={styles.period}>{edu.period}</span>
+                      <p>{edu.description}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -90,9 +96,9 @@ const Resume = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              <h2 className={styles.sectionTitle}>Education</h2>
+              <h2 className={styles.sectionTitle}>Projects</h2>
               <div className={styles.timeline}>
-                {education.map((edu, index) => (
+                {projects.map((project, index) => (
                   <motion.div
                     key={index}
                     className={styles.timelineItem}
@@ -102,10 +108,36 @@ const Resume = () => {
                   >
                     <div className={styles.timelineMarker}></div>
                     <div className={styles.timelineContent}>
-                      <h3>{edu.degree}</h3>
-                      <h4>{edu.school}</h4>
-                      <span className={styles.period}>{edu.period}</span>
-                      <p>{edu.description}</p>
+                      <h3>{project.title}</h3>
+                      <p>{project.description}</p>
+                      <span className={styles.period}>{project.technologies}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.section>
+            
+            <motion.section
+              className={styles.section}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+            >
+              <h2 className={styles.sectionTitle}>Certifications</h2>
+              <div className={styles.timeline}>
+                {certifications.map((cert, index) => (
+                  <motion.div
+                    key={index}
+                    className={styles.timelineItem}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.9 + index * 0.2, duration: 0.6 }}
+                  >
+                    <div className={styles.timelineMarker}></div>
+                    <div className={styles.timelineContent}>
+                      <h3>{cert.title}</h3>
+                      <h4>{cert.issuer}</h4>
+                      <span className={styles.period}>{cert.date}</span>
                     </div>
                   </motion.div>
                 ))}

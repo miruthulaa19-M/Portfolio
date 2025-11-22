@@ -22,21 +22,16 @@ const About = () => {
             >
               <h2>Hello! I'm a passionate developer</h2>
               <p>
-                I'm a web developer with a passion for creating beautiful, 
-                functional, and user-centered digital experiences. With expertise in 
-                modern web technologies, I enjoy turning complex problems into simple, 
-                beautiful designs.
+                Hi! I'm a Computer Science Engineering student currently in my second year, passionate about building the web of tomorrow.
               </p>
               <p>
-                My journey in web development started several years ago, and I've been 
-                constantly learning and evolving with the latest technologies. I believe 
-                in writing clean, maintainable code and creating applications that provide 
-                real value to users.
+                I love exploring how technology can solve real problems and bring creative ideas to life. From designing interactive websites to learning modern development frameworks, I'm constantly leveling up my skills to craft meaningful and user-focused digital experiences.
               </p>
               <p>
-                When I'm not coding, you can find me exploring new technologies, 
-                contributing to open source projects, or sharing knowledge with the 
-                developer community.
+                I believe every project is a chance to learn, improve, and innovate. Whether it's experimenting with new tools, collaborating with others, or diving deep into code — I'm always excited to explore what's next.
+              </p>
+              <p>
+                🌱 As I continue my journey in tech, I'm eager to contribute to impactful projects, grow in the developer community, and shape a future where technology makes life better for everyone.
               </p>
             </motion.div>
             
