@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Portfolio Website - React + TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with **React** and **TypeScript**, featuring 3D animations and glassmorphism design.
+
+## 🚀 Built With
+- **React 19** - Frontend framework
+- **TypeScript** - Type-safe JavaScript
+- **CSS Modules** - Scoped styling
+- **Framer Motion** - Smooth animations
+- **React Router** - Navigation
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) TypeScript template.
 
 ## Available Scripts
 

@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: 'Portfolio Website',
       description: 'A responsive portfolio website showcasing projects and skills with modern design and animations.',
-      technologies: ['React', 'CSS Modules'],
+      technologies: ['React', 'TypeScript', 'CSS Modules', 'Framer Motion'],
       githubUrl: 'https://github.com/miruthulaa/myport',
       liveUrl: 'https://miruthulaa-portfolio.netlify.app'
     }
