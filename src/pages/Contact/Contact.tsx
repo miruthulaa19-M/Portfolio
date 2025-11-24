@@ -79,14 +79,11 @@ const Contact: React.FC = () => {
               </div>
               
               <div className={styles.socialLinks}>
-                <a href="https://github.com/miruthulaa" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/miruthulaa19-M" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
                 <a href="https://linkedin.com/in/miruthulaa" target="_blank" rel="noopener noreferrer">
                   LinkedIn
-                </a>
-                <a href="https://twitter.com/miruthulaa" target="_blank" rel="noopener noreferrer">
-                  Twitter
                 </a>
               </div>
             </motion.div>

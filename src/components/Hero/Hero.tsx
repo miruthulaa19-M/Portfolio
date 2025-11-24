@@ -2,12 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styles from './Hero.module.css';
-import Hero3DBackground from './Hero3DBackground';
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
-      <Hero3DBackground />
       <div className="container">
         <div className={styles.heroContent}>
           <motion.div
@@ -66,7 +64,7 @@ const Hero = () => {
           >
             <div className={styles.imageContainer}>
               <img 
-                src="/images/profile.jpg" 
+                src="/images/miruthulaa.jpeg" 
                 alt="MIRUTHULAA M - Web Developer" 
                 className={styles.profileImage}
               />

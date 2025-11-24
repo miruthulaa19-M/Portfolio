@@ -17,19 +17,51 @@
   font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 10px rgba(56, 239, 125, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .aboutText p {
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   line-height: 1.8;
   font-size: 1.1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
-  padding: 1rem;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(3deg) rotateY(3deg);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.aboutText p::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(255, 255, 255, 0.12);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+.aboutText p::before {
+  content: '🎓';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .aboutImage {
@@ -41,18 +73,136 @@
   width: 250px;
   height: 250px;
   border-radius: 20px;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.aboutText p:hover {
+  transform: rotateX(5deg) rotateY(5deg) translateY(-8px);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.3),
+    inset 0 3px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+}
+
+.aboutText p:hover::after {
+  border-top-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.point:hover {
+  transform: rotateX(4deg) rotateY(3deg) translateY(-5px);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.25),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.point:hover::before {
+  border-top-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
 }
 
 .placeholder {
   font-size: 6rem;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.aboutPoints {
+  margin-top: 2rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(2deg) rotateY(1deg);
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.point::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.1);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.point:nth-child(1)::after {
+  content: '📚';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.point:nth-child(2)::after {
+  content: '🎨';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.point:nth-child(3)::after {
+  content: '💡';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.point:nth-child(4)::after {
+  content: '🤝';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.point:nth-child(5)::after {
+  content: '🚀';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.bullet {
+  color: rgba(100, 200, 255, 0.9);
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  filter: drop-shadow(0 0 6px rgba(100, 200, 255, 0.5)) drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
 }
 
 .stats {

@@ -2,6 +2,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(135deg, #2d1b69 0%, #11998e 50%, #38ef7d 100%);
+  background-attachment: fixed;
 }
 
 main {

@@ -43,14 +43,59 @@
 
 .description {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2rem;
   line-height: 1.6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
-  padding: 1rem;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(3deg) rotateY(3deg);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.description::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(255, 255, 255, 0.12);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+.description::before {
+  content: '💻';
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.description:hover {
+  transform: rotateX(5deg) rotateY(5deg) translateY(-8px);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.3),
+    inset 0 3px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+}
+
+.description:hover::after {
+  border-top-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
 }
 
 .heroButtons {
@@ -102,6 +147,10 @@
     transform: translateY(-20px) scale(1.05);
   }
 }
+
+
+
+
 
 .heroContent {
   position: relative;

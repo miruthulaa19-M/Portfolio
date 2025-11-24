@@ -6,10 +6,10 @@ import styles from './Projects.module.css';
 const Projects = () => {
   const projects = [
     {
-      title: 'Portfolio Website',
-      description: 'A responsive portfolio website showcasing projects and skills with modern design and animations.',
-      technologies: ['React', 'TypeScript', 'CSS Modules', 'Framer Motion'],
-      githubUrl: 'https://github.com/miruthulaa/myport',
+      title: 'Event and Internship management system',
+      description: 'A unified college communication system that enables seamless event posting, registration, and participation tracking.',
+      technologies: ['React', 'TypeScript', 'CSS Modules', 'MongoDB'],
+    
       liveUrl: 'https://miruthulaa-portfolio.netlify.app'
     }
   ];

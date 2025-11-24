@@ -22,17 +22,33 @@ const About = () => {
             >
               <h2>Hello! I'm a passionate developer</h2>
               <p>
-                Hi! I'm a Computer Science Engineering student currently in my second year, passionate about building the web of tomorrow.
+                I'm a second-year Computer Science Engineering student passionate about web development.
+                I enjoy creating useful and interactive digital experiences.
+                Every project helps me learn, improve, and explore new ideas in tech.
               </p>
-              <p>
-                I love exploring how technology can solve real problems and bring creative ideas to life. From designing interactive websites to learning modern development frameworks, I'm constantly leveling up my skills to craft meaningful and user-focused digital experiences.
-              </p>
-              <p>
-                I believe every project is a chance to learn, improve, and innovate. Whether it's experimenting with new tools, collaborating with others, or diving deep into code — I'm always excited to explore what's next.
-              </p>
-              <p>
-                🌱 As I continue my journey in tech, I'm eager to contribute to impactful projects, grow in the developer community, and shape a future where technology makes life better for everyone.
-              </p>
+              
+              <div className={styles.aboutPoints}>
+                <div className={styles.point}>
+                  <span className={styles.bullet}>•</span>
+                  Learning modern web technologies and tools
+                </div>
+                <div className={styles.point}>
+                  <span className={styles.bullet}>•</span>
+                  Building creative and user-friendly websites
+                </div>
+                <div className={styles.point}>
+                  <span className={styles.bullet}>•</span>
+                  Exploring how tech can solve real-life problems
+                </div>
+                <div className={styles.point}>
+                  <span className={styles.bullet}>•</span>
+                  Enjoy teamwork, coding, and continuous learning
+                </div>
+                <div className={styles.point}>
+                  <span className={styles.bullet}>•</span>
+                  Aiming to grow as a developer and contribute to impactful projects
+                </div>
+              </div>
             </motion.div>
             
             <motion.div

@@ -15,11 +15,12 @@
 }
 
 .section {
-  background-color: var(--bg-secondary);
+  background: transparent;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border-color);
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 1rem;
 }
 
 .sectionTitle {
@@ -82,13 +83,13 @@
 
 .timelineContent h4 {
   font-size: 1.1rem;
-  color: var(--primary-color);
+  color: #8b5cf6;
   margin-bottom: 0.5rem;
 }
 
 .period {
   display: inline-block;
-  background-color: var(--primary-color);
+  background-color: #8b5cf6;
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
