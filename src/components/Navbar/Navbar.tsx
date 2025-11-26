@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -13,17 +11,11 @@ const Navbar = () => {
     { path: '/about', label: 'About' },
     { path: '/skills', label: 'Skills' },
     { path: '/projects', label: 'Projects' },
-    { path: '/resume', label: 'Resume' },
     { path: '/contact', label: 'Contact' }
   ];
 
   return (
-    <motion.nav 
-      className={styles.navbar}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <nav className={styles.navbar}>
       <div className="container">
         <div className={styles.navContent}>
           <Link to="/" className={styles.logo}>
@@ -44,7 +36,9 @@ const Navbar = () => {
           </div>
           
           <div className={styles.navRight}>
-            <ThemeToggle />
+            <Link to="/contact" className={styles.hireBtn}>
+              Hire Me
+            </Link>
             <button 
               className={styles.hamburger}
               onClick={() => setIsOpen(!isOpen)}
@@ -57,7 +51,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
