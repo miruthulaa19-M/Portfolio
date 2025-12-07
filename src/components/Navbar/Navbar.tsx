@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
+import Lottie from "lottie-react";
+import welcomeAnimation from "../../assets/welcome.json";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -18,37 +21,37 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className="container">
         <div className={styles.navContent}>
+
+          {/* ----- LOGO + LOTTIE ANIMATION ----- */}
           <Link to="/" className={styles.logo}>
-            Portfolio
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <Lottie 
+                animationData={welcomeAnimation} 
+                style={{ width: 50, height: 50 }}
+                loop={true}
+              />
+              <span>Portfolio</span>
+            </div>
           </Link>
-          
+
+          {/* ----- NAV LINKS ----- */}
           <div className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`${styles.navLink} ${location.pathname === item.path ? styles.active : ''}`}
+                className={`${styles.navLink} ${
+                  location.pathname === item.path ? styles.active : ''
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
           </div>
-          
-          <div className={styles.navRight}>
-            <Link to="/contact" className={styles.hireBtn}>
-              Hire Me
-            </Link>
-            <button 
-              className={styles.hamburger}
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
+
+         
+
         </div>
       </div>
     </nav>

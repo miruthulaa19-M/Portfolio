@@ -50,8 +50,8 @@ const Hero = () => {
             <h2 className={styles.title}>Web Developer</h2>
             
             <p className={styles.description}>
-              I create exceptional digital experiences through clean code and innovative design. 
-              Specializing in modern web technologies and user-centered development.
+              Second-year Computer Science Engineering student passionate about building innovative web solutions. 
+              Learning and exploring modern technologies while developing practical projects.
             </p>
             
             <div className={styles.socialIcons}>
@@ -73,7 +73,7 @@ const Hero = () => {
             </div>
             
             <div className={styles.heroButtons}>
-              <a href="c:\Users\MIRUTHULAA M\Downloads\resume.pdf" className={styles.downloadBtn}>
+              <a href="/resume.pdf" download="Miruthulaa_Resume.pdf" className={styles.downloadBtn}>
                 Download Resume
               </a>
             </div>

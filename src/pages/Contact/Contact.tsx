@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Contact.module.css';
+import VantaBackground from '../../components/VantaBackground/VantaBackground';
 
 interface FormData {
   name: string;
@@ -42,6 +43,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className={styles.contact}>
+      <VantaBackground />
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

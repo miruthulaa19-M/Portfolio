@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Skills.module.css';
+import VantaBackground from '../../components/VantaBackground/VantaBackground';
 
 const Skills = () => {
   const skillCategories = [
@@ -33,6 +34,7 @@ const Skills = () => {
 
   return (
     <div className={styles.skills}>
+      <VantaBackground />
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

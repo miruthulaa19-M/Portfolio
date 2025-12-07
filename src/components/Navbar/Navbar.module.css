@@ -5,18 +5,22 @@
   right: 0;
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border-color);
-  z-index: 1000;
+  z-index: 2000;
   padding: 1rem 0;
+  backdrop-filter: blur(8px);
 }
 
 .navContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--text-primary);
   text-decoration: none;
@@ -34,7 +38,7 @@
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .navLink:hover,
@@ -43,9 +47,9 @@
 }
 
 .navLink.active::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   left: 0;
   right: 0;
   height: 2px;
@@ -62,7 +66,7 @@
 .hireBtn {
   background: var(--primary-color);
   color: white;
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1.4rem;
   border-radius: var(--radius);
   text-decoration: none;
   font-weight: 600;
@@ -74,23 +78,25 @@
   background: var(--secondary-color);
 }
 
+/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.3rem;
 }
 
 .hamburger span {
-  width: 25px;
+  width: 26px;
   height: 3px;
   background-color: var(--text-primary);
-  margin: 3px 0;
-  transition: 0.3s;
+  margin: 4px 0;
+  transition: 0.3s ease;
 }
 
+/* MOBILE MENU */
 @media (max-width: 768px) {
   .navLinks {
     position: fixed;
@@ -99,14 +105,16 @@
     right: 0;
     background: var(--bg-primary);
     flex-direction: column;
-    padding: 2rem;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    padding: 2rem 0;
+    transform: translateY(-120%);
+    transition: transform 0.35s ease;
     border-bottom: 1px solid var(--border-color);
+    z-index: 1999;
+    gap: 1.5rem;
   }
 
   .navLinks.open {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 
   .hamburger {
